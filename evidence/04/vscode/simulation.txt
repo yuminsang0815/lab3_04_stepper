@@ -1,0 +1,10 @@
+RUN C:\iverilog\bin\iverilog.EXE -g2012 -Wall -I C:\Users\a2391\lab3_22_stepper\src -I C:\Users\a2391\lab3_22_stepper\sim -s tb_stepper -o C:\Users\a2391\lab3_22_stepper\build\sim\run-95e7f618c2bf4d1695d41d398d3140ea\sim.vvp C:\Users\a2391\lab3_22_stepper\src\lab3_stepper.v C:\Users\a2391\lab3_22_stepper\sim\tb_stepper.sv
+
+RUN C:\iverilog\bin\vvp.EXE -N C:\Users\a2391\lab3_22_stepper\build\sim\run-95e7f618c2bf4d1695d41d398d3140ea\sim.vvp
+VCD info: dumpfile wave.vcd opened for output.
+LAB3_STEPPER_PASS checks=8
+C:\Users\a2391\lab3_22_stepper\sim\tb_stepper.sv:61: $finish called at 831000 (1ps)
+
+시뮬레이션 실행 완료. 진리표·자기검사·파형으로 회로의 정답 여부를 확인하세요.
+WAVE C:\Users\a2391\lab3_22_stepper\build\sim\wave.vcd
+ *  Terminal will be reused by tasks, pressany key to close it. 
