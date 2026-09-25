@@ -64,8 +64,8 @@
 ## 4. 시뮬레이션 결과 및 수정 실험
 
 ### 정상 시뮬레이션 확인
-- **종료 로그**: `LAB3_STEPPER_PASS checks=8`, 종료 시각 `831000 ps (831 ns)`
-- **파형 분석**:
+- **[종료 로그](../../evidence/04/vscode/simulation.txt)**: `LAB3_STEPPER_PASS checks=8`, 종료 시각 `831000 ps (831 ns)`
+- **[파형 분석](../../evidence/04/vscode/wave.png)**:
   - `enable_sync=1`, `direction_sync=0`인 구간에서는 매 4클록마다 `state`가 `0 -> 1 -> 2 -> 3 -> 0`으로 증가하며, 이에 맞추어 `stepmotor` 출력이 `0011 -> 0110 -> 1100 -> 1001 -> 0011`로 순환한다.
   - `direction_sync=1` 인가 시 다음 유효 스텝에서 `state`가 `3 -> 2`로 역순 감소하며 출력이 `1001 -> 1100`으로 올바르게 역전된다.
   - `enable_sync=0`으로 전환된 이후에는 12클록 동안 클록이 계속 인가되어도 `count=0`으로 유지되고 `state=2`, `stepmotor=4'b1100` 상태가 변함없이 안정적으로 유지된다.
